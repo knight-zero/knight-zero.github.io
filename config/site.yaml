@@ -1,0 +1,192 @@
+# yaml-language-server: $schema=https://json-schema.org/draft-07/schema
+# =============================================================================
+# Site Configuration
+# =============================================================================
+# This file contains all site-specific configurations.
+# Modify this file to customize your blog.
+# After changes, rebuild the site: docker compose up -d --build
+# =============================================================================
+
+# =============================================================================
+# Site Basic Information
+# =============================================================================
+site:
+  title: 博客 # 网站名称
+  alternate: knight-zero # 网站英文名称 用于页脚、Logo、@ handle 等
+  subtitle: Test # 网站副标题
+  name: Hoshi # 作者名称 - 请修改为你的名字
+  description: 这里是待添加的描述 # 网站描述
+  avatar: /img/avatar.webp # 网站头像
+  showLogo: false # 是否显示 Logo
+  author: Hoshi # 作者名称 - 请修改为你的名字
+  url: https://koharu.cosine.ren # 站点 URL 用于 RSS 和 SEO
+  startYear: 2026 # 建站年份
+  keywords: # SEO 关键词
+    - 博客
+    - Astro
+    - 阅读
+    - 游戏开发
+    # 请根据你的网站内容添加关键词
+
+# =============================================================================
+# Category Map
+# Maps Chinese category names to URL-friendly English slugs
+# Example: '随笔' category URL becomes /categories/life
+# =============================================================================
+categoryMap:
+  # Primary categories
+  随笔: life
+  笔记: note
+  工具: tools
+  周刊: weekly
+  # Secondary categories (for nested paths)
+  # 前端: front-end
+  技术: tech
+  # Add more as needed:
+  # 后端: back-end
+  # 算法: algorithm
+  # 项目: project
+
+# =============================================================================
+# Featured Categories (Homepage)
+# 首页精选分类 - 在首页以卡片形式展示的分类入口
+# =============================================================================
+# 字段说明：
+#   link: 分类链接路径，对应 categoryMap 中的英文 slug
+#   label: 卡片上显示的分类名称
+#   image: 封面图片路径（相对于 public 目录）
+#   description: 分类描述文字，显示在卡片上
+# -----------------------------------------------------------------------------
+featuredCategories:
+  - link: life # 对应 categoryMap 中 随笔: life
+    label: 随笔
+    image: /img/cover/2.webp
+    description: 生活记录、随想随笔
+  - link: note # 对应 categoryMap 中 笔记: note
+    label: 笔记
+    image: /img/cover/4.webp
+    description: 技术笔记、学习笔记
+  - link: tech # 嵌套分类：技术文档
+    label: 技术
+    image: /img/cover/1.webp
+    description: 前端技术相关
+  - link: tools # 对应 categoryMap 中 工具: tools
+    label: 工具
+    image: /img/cover/11.webp
+    description: 工具使用、效率提升
+
+# =============================================================================
+# Featured Series (Weekly)
+# 精选系列/周刊功能 - 用于展示定期更新的系列内容
+# =============================================================================
+# 字段说明：
+#   categoryName: 对应的分类名称（需在 categoryMap 中存在）
+#   label: 侧边栏/导航中显示的简短名称
+#   fullName: 系列页面标题显示的完整名称
+#   description: 系列介绍文字，支持多行
+#   cover: 系列页面头图路径（相对于 public 目录）
+#   enabled: 是否启用此功能（设为 false 可关闭）
+#   links: 相关链接配置
+# -----------------------------------------------------------------------------
+featuredSeries:
+  categoryName: 周刊 # 必须与 categoryMap 中的分类名匹配
+  label: 我的周刊 # 简短名称
+  fullName: 我的技术周刊 # 完整名称
+  description: | # 支持多行文本
+    这是周刊/系列文章功能的示例配置。
+    你可以用它来发布定期更新的系列内容，如技术周刊、读书笔记系列等。
+    设置 enabled: false 可以关闭此功能。
+  cover: /img/weekly_header.webp # 系列页面头图
+  enabled: false # 总开关 暂不开放
+  links: # 相关链接（可选）
+    github: https://github.com/your-username/your-repo # (可选) GitHub 仓库
+    rss: /rss.xml # (可选) RSS 订阅链接
+    # chrome: https://chromewebstore.google.com/detail/your-extension-id # (可选) 浏览器插件
+    # docs: https://your-docs-url # (可选) 文档链接
+
+# =============================================================================
+# Social Links
+# 社交链接 - 显示在页脚和个人信息区域
+# =============================================================================
+# 字段说明：
+#   url: 链接地址（邮箱需加 mailto: 前缀）
+#   icon: Iconify 图标标识，格式为 "集合:图标名"
+#         图标查询：https://icon-sets.iconify.design/ri/
+#   color: (可选) 图标颜色，十六进制格式如 '#191717'
+# =============================================================================
+social:
+  github:
+    url: https://github.com/your-username # 替换为你的 GitHub 链接
+    icon: ri:github-fill # Remix Icon 的 GitHub 图标
+    color: "#191717" # (可选) 图标颜色
+  email:
+    url: mailto:your@email.com # 替换为你的邮箱，需加 mailto: 前缀
+    icon: ri:mail-line
+    color: "#55acd5"
+  rss:
+    url: /rss.xml # 站内 RSS 订阅地址
+    icon: ri:rss-line
+    color: "#ff6600"
+
+content:
+  addBlankTarget: true # 外部链接新窗口打开
+  smoothScroll: true # 平滑滚动
+  addHeadingLevel: true # 标题锚点
+  enhanceCodeBlock: true # 增强代码块
+  enableCodeCopy: true # 代码复制按钮
+  enableCodeFullscreen: true # 代码全屏按钮
+  enableLinkEmbed: true # 链接卡片预览
+  enableTweetEmbed: true # 推文嵌入
+  enableOGPreview: true # OG 预览卡片
+  previewCacheTime: 3600 # 预览缓存时间(秒)
+  lazyLoadEmbeds: true # 延迟加载嵌入
+
+# =============================================================================
+# Navigation Routes
+# 导航菜单配置 - 定义顶部导航栏的菜单项
+# =============================================================================
+# 字段说明：
+#   name: 菜单项显示名称
+#   path: 链接路径（有 children 时可省略，点击展开子菜单）
+#   icon: Iconify 图标标识，格式 "集合:图标名"
+#   children: (可选) 子菜单列表，结构与父级相同
+# -----------------------------------------------------------------------------
+# 图标参考：
+#   - Font Awesome 6: https://icon-sets.iconify.design/fa6-solid/
+#   - Remix Icon: https://icon-sets.iconify.design/ri/
+# -----------------------------------------------------------------------------
+navigation:
+  - name: 首页 # 菜单显示名称
+    path: / # 链接路径
+    icon: ri:home-heart-fill # 图标
+  - name: 周刊
+    path: /weekly
+    icon: ri:newspaper-line
+  - name: 文章 # 有子菜单时，path 可省略
+    icon: ri:quill-pen-ai-fill
+    children: # 子菜单列表
+      - name: 分类
+        path: /categories
+        icon: ri:grid-fill
+      - name: 标签
+        path: /tags
+        icon: fa6-solid:tags
+      - name: 归档
+        path: /archives
+        icon: ri:archive-2-fill
+  - name: 关于
+    path: /about
+    icon: fa6-regular:circle-user
+
+# =============================================================================
+# Analytics (Umami)
+# =============================================================================
+# id: Umami 网站 ID
+# endpoint: Umami 服务器地址
+# enabled: 是否启用统计
+# -----------------------------------------------------------------------------
+analytics:
+  umami:
+    enabled: true
+    id: your-umami-id
+    endpoint: https://stats.example.com
