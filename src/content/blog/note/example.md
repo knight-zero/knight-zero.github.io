@@ -230,7 +230,3 @@ pie title 博客内容分布
 图片会自动应用 LQIP（低质量图片占位符）效果：
 
 ![示例图片](/img/cover/3.webp)
-
-## 总结
-
-以上展示了 astro-koharu 支持的主要 Markdown 功能。更多功能请参考 [使用指南](/post/astro-koharu-guide)。
