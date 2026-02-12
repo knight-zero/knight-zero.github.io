@@ -1,6 +1,6 @@
 ---
 title: 秋招面经
-link: historyPhilosophy
+link: mianjing
 catalog: true
 date: 2024-01-01 00:00:00
 description: 记录了一些本人于 2025.02 ~ 2025.10 实习面试和秋招面试期间 学习和经历的面试经验，主要为八股
