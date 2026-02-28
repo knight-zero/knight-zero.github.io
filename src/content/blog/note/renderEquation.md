@@ -20,10 +20,18 @@ Kajiya 提出了一个概括了多数已知渲染算法的微分方程。在讨�
 
 #### 辐射度量学
 
+1. 辐射能(radiant energy)$Q$：电磁辐射(electromaagnetic radiation)的能量
+$$ Q[J = Joule] $$
+2. 辐射通量(radiant flux)或功率(power)
+$$\Phi = \frac{dQ}{dt}[W = Watt][lm - lumen]$$
+3. 辐射强度(Radiant Intensity)I：单位立体角由点光源发出的功率
+$$I(\omega) = \frac{d\Phi}{d\omega}[\frac{W}{sr}][\frac{lm}{sr} = cd = candela] $$
+4. 立体角(solid angle)：球面上的投影面积与半径平方之比
+
+
 #### 蒙特卡洛方法
 
 #### 马尔科夫链
-
 
 ## 渲染方程 The Render Equation
 
