@@ -3,7 +3,7 @@ title: 西方哲学史手记
 link: historyPhilosophy
 catalog: true
 date: 2024-01-01 00:00:00
-description: 
+description: 哲学史手记
 tags:
   - 入门
   - 哲学
