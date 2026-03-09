@@ -17,9 +17,14 @@ sticky: false
 
 #### 极限
 1. 两个重要极限
+
 $$ lim_{x->0}\frac{\sin x}{x} = 1 $$
+
+
 $$ lim_{x->\infty}(1 + \frac{1}{x})^x = e $$
+
 2. 洛必达法则：极限形式为$\frac{0}{0}$或$\frac{\infty}{\infty}$
+
 $$ lim\frac{f(x)}{g(x)} = lim\frac{f'(x)}{g'(x)}$$
 
 #### 导数
@@ -30,11 +35,17 @@ $$略$$
 
 #### 积分法
 1. 第一类换元法
+
 $$ \int{f(g(x))g'(x)dx}  = \int{f(g(x))}dg(x) = \int{f(u)du}$$
+
 2. 第二类换元法
+
 $$ 令x = g(t), \int{f(x)dx} = \int{f(g(t))g'(t)dt}   $$
+
 3. 分部积分法
+
 $$ \int{f(x)g'(x)dx}  = \int{f(x)dg(x)} = g'(x)f(x) - \int{g(x)df(x)}$$
+
 4. 有理函数的积分 
 $$ 略 $$
 5. [定积分在几何和物理上的应用](/note/definiteIntegralApp)
@@ -42,12 +53,18 @@ $$ 略 $$
 
 #### 多元函数微分法
 1. 全微分
+
 $$ df(x,y) = \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy$$
+
 2. 隐函数求导
 3. 方向导数：函数在给定方向上的变化率，$f$ 在 $P_0$ 沿方向 $l$ 上的方向导数记为 ：
+
 $$ f_l(P_0) = f_x(P_0)\cos\alpha + f_y(P_0)\sin\beta, \alpha + \beta = \pi/2$$
+
 4. 梯度：若 $f(x,y)$ 在点 $P_0(x_0,y_0)$ 存在对所有自变量的偏导数，则称向量 $(f_x(P_0),f_y(P_0))$ 为函数$f$在该点的梯度，记作
+
 $$ grad f(x_0,y_0) = (f_x(P_0),f_y(P_0)) $$
+
 5. 多元函数的极值
 6. 最小二乘法
 
