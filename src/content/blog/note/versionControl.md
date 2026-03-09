@@ -14,9 +14,7 @@ sticky: false
 
 ## Git
 
-
 ## SVN
-
 
 ## Perforce
 
